@@ -1,0 +1,524 @@
+:root {
+  --ink: #101a21;
+  --text: #15232c;
+  --copy: #4f626d;
+  --muted: #647984;
+  --paper: #eaf2f5;
+  --panel: #ffffff;
+  --line: #38505d;
+  --accent: #5ca4c8;
+  --soft: #d7e7ed;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(rgba(56, 80, 93, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 80, 93, 0.07) 1px, transparent 1px),
+    var(--paper);
+  background-size: 48px 48px;
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cv-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: min(1040px, calc(100% - 32px));
+  margin: 18px auto;
+}
+
+.back-link,
+.print-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0 16px;
+  border: 2px solid var(--line);
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--ink);
+  cursor: pointer;
+}
+
+.print-button {
+  background: var(--accent);
+}
+
+.cv-sheet {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto 40px;
+  border: 2px solid var(--line);
+  background: var(--panel);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+.cv-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 38px;
+  align-items: stretch;
+  padding: 30px;
+  border-bottom: 2px solid var(--line);
+}
+
+.cv-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.profile {
+  max-width: 650px;
+  margin-bottom: 0;
+  color: var(--copy);
+  line-height: 1.65;
+}
+
+.contact-data {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(56, 80, 93, 0.35);
+  font-size: 0.72rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.contact-data > a,
+.contact-data > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.contact-data svg {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  color: var(--line);
+  stroke-width: 2.2;
+}
+
+.contact-data span span,
+.contact-data a span {
+  overflow-wrap: anywhere;
+}
+
+.cv-photo {
+  min-height: 280px;
+  border: 2px solid var(--line);
+  background: var(--soft);
+  box-shadow: 5px 5px 0 var(--ink);
+  overflow: hidden;
+}
+
+.cv-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+}
+
+.cv-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.cv-sidebar {
+  padding: 30px;
+  border-right: 2px solid var(--line);
+  background: var(--soft);
+}
+
+.cv-sidebar section + section {
+  margin-top: 32px;
+}
+
+.cv-sidebar h2,
+.section-title h2 {
+  margin-bottom: 14px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.cv-sidebar ul,
+.cv-project ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-sidebar li {
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(56, 80, 93, 0.22);
+  font-size: 0.84rem;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-list li {
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-weight: 800;
+}
+
+.cv-main {
+  padding: 30px;
+}
+
+.cv-main > section + section {
+  margin-top: 36px;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--line);
+}
+
+.section-title span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cv-project {
+  padding: 20px;
+  border: 2px solid var(--line);
+}
+
+.experience-item {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(56, 80, 93, 0.3);
+}
+
+.experience-item:first-of-type {
+  padding-top: 0;
+}
+
+.experience-heading,
+.education-list article {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.experience-heading h3,
+.education-list h3 {
+  margin-bottom: 4px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.experience-heading p,
+.education-list p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.experience-heading > span,
+.education-list span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.experience-item > p {
+  margin: 12px 0 0;
+  color: var(--copy);
+  line-height: 1.55;
+}
+
+.cv-project + .cv-project {
+  margin-top: 16px;
+}
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.project-heading h3 {
+  margin-bottom: 4px;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+}
+
+.project-heading p,
+.project-heading > a,
+.project-heading > span {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.cv-project > p {
+  color: var(--copy);
+  line-height: 1.55;
+}
+
+.cv-project li {
+  margin-top: 8px;
+  color: var(--copy);
+  line-height: 1.45;
+}
+
+.cv-project li::before {
+  content: "\2713";
+  margin-right: 8px;
+  color: var(--line);
+  font-weight: 900;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.capability-grid article {
+  min-height: 120px;
+  padding: 16px;
+  border: 2px solid var(--line);
+  background: var(--soft);
+}
+
+.capability-grid h3 {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.capability-grid p {
+  margin-bottom: 0;
+  color: var(--copy);
+  line-height: 1.5;
+}
+
+.education-list {
+  display: grid;
+  gap: 0;
+}
+
+.education-list article {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(56, 80, 93, 0.3);
+}
+
+.education-list article:first-child {
+  padding-top: 0;
+}
+
+@media (max-width: 760px) {
+  .cv-heading,
+  .cv-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-photo {
+    width: min(320px, 100%);
+    min-height: 320px;
+    margin: 0 auto;
+  }
+
+  .contact-data {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: start;
+    white-space: normal;
+  }
+
+  .experience-heading,
+  .education-list article {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .experience-heading > span,
+  .education-list span {
+    text-align: left;
+  }
+
+  .cv-sidebar {
+    border-right: 0;
+    border-bottom: 2px solid var(--line);
+  }
+}
+
+@media (max-width: 520px) {
+  .cv-toolbar,
+  .cv-sheet {
+    width: calc(100% - 18px);
+  }
+
+  .cv-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .back-link,
+  .print-button {
+    justify-content: center;
+  }
+
+  .cv-heading,
+  .cv-sidebar,
+  .cv-main {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .project-heading,
+  .section-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-data {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body {
+    background: #ffffff;
+    print-color-adjust: exact;
+  }
+
+  .cv-toolbar {
+    display: none;
+  }
+
+  .cv-sheet {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .cv-heading {
+    grid-template-columns: 1fr 150px;
+    gap: 18px;
+    padding: 18px 20px;
+  }
+
+  h1 {
+    font-size: 2.9rem;
+  }
+
+  .profile {
+    font-size: 0.86rem;
+  }
+
+  .contact-data {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-top: 12px;
+    padding-top: 10px;
+    font-size: 0.68rem;
+  }
+
+  .contact-data svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .cv-photo {
+    width: auto;
+    min-height: 190px;
+    margin: 0;
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+
+  .cv-layout {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .cv-sidebar,
+  .cv-main {
+    padding: 20px;
+  }
+
+  .cv-project {
+    break-inside: avoid;
+  }
+
+  .experience-item,
+  .education-list article {
+    break-inside: avoid;
+  }
+
+  .capability-grid article {
+    min-height: 90px;
+  }
+}

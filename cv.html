@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV | Facundo Videla</title>
+    <meta
+      name="description"
+      content="Curriculum de Facundo Videla, desarrollador Full Stack especializado en aplicaciones web y sistemas de gestion."
+    />
+    <meta name="theme-color" content="#5ca4c8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="cv.css" />
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+  </head>
+  <body>
+    <header class="cv-toolbar">
+      <a class="back-link" href="index.html">&larr; Volver al portfolio</a>
+      <button class="print-button" type="button" id="print-cv">Imprimir / Guardar PDF</button>
+    </header>
+
+    <main class="cv-sheet">
+      <header class="cv-heading">
+        <div class="cv-intro">
+          <p class="eyebrow">Desarrollador Full Stack</p>
+          <h1>Facundo Videla</h1>
+          <p class="profile">
+            Desarrollo aplicaciones web completas, desde el relevamiento y modelado de
+            datos hasta la interfaz, las integraciones y el despliegue en produccion.
+          </p>
+          <div class="contact-data">
+            <a href="mailto:videlafacundo2004@gmail.com">
+              <i data-lucide="mail" aria-hidden="true"></i>
+              <span>videlafacundo2004@gmail.com</span>
+            </a>
+            <a href="https://wa.me/5491134208953">
+              <i data-lucide="phone" aria-hidden="true"></i>
+              <span>+54 9 11 3420-8953</span>
+            </a>
+            <a href="https://www.linkedin.com/in/facu-videla">
+              <i data-lucide="link" aria-hidden="true"></i>
+              <span>linkedin.com/in/facu-videla</span>
+            </a>
+            <span>
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              <span>Buenos Aires, Argentina</span>
+            </span>
+          </div>
+        </div>
+        <div class="cv-photo">
+          <img src="assets/facundo-videla-cv.jpg" alt="Retrato profesional de Facundo Videla" />
+        </div>
+      </header>
+
+      <div class="cv-layout">
+        <aside class="cv-sidebar">
+          <section>
+            <h2>Tecnologias</h2>
+            <ul class="skill-list">
+              <li>JavaScript</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>HTML y CSS</li>
+              <li>Bootstrap</li>
+              <li>MySQL / MariaDB</li>
+              <li>MongoDB / Mongoose</li>
+              <li>APIs REST</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Herramientas</h2>
+            <ul>
+              <li>Git</li>
+              <li>GitHub / GitLab</li>
+              <li>Postman</li>
+              <li>JWT y bcrypt</li>
+              <li>Mercado Pago</li>
+              <li>Nodemailer / SMTP</li>
+              <li>PDFKit / PDF-Lib</li>
+              <li>XLSX y Multer</li>
+              <li>Cloudflare R2</li>
+              <li>Linux / Bash</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Otros conocimientos</h2>
+            <ul>
+              <li>Java, C++, C# y Go</li>
+              <li>Kotlin / Android Studio</li>
+              <li>Unity</li>
+              <li>PostgreSQL</li>
+              <li>POO y arquitectura cliente-servidor</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Idiomas</h2>
+            <ul>
+              <li>Espa&ntilde;ol: nativo</li>
+              <li>Ingles: basico, lectura tecnica</li>
+            </ul>
+          </section>
+        </aside>
+
+        <div class="cv-main">
+          <section>
+            <div class="section-title">
+              <h2>Experiencia</h2>
+            </div>
+
+            <article class="experience-item">
+              <div class="experience-heading">
+                <div>
+                  <h3>Operario</h3>
+                  <p>DyAmplast | Villa Bosch</p>
+                </div>
+                <span>Noviembre 2024 - Actualidad</span>
+              </div>
+              <p>
+                Operacion y monitoreo de maquinaria en lineas de produccion, controlando la
+                continuidad del proceso. Organizacion de materiales, alimentacion de linea
+                y mantenimiento del orden y la eficiencia del area de trabajo.
+              </p>
+            </article>
+
+            <article class="experience-item">
+              <div class="experience-heading">
+                <div>
+                  <h3>Soporte IT Trainee</h3>
+                  <p>Xperts Consulting | CABA</p>
+                </div>
+                <span>Septiembre 2024 - Noviembre 2024</span>
+              </div>
+              <p>
+                Soporte tecnico basico a usuarios, diagnostico y resolucion de incidencias
+                de hardware y software.
+              </p>
+            </article>
+          </section>
+
+          <section>
+            <div class="section-title">
+              <h2>Proyectos destacados</h2>
+              <span>Desarrollo integral</span>
+            </div>
+
+            <article class="cv-project">
+              <div class="project-heading">
+                <div>
+                  <h3>Telorvehc</h3>
+                  <p>Ferreteria web full stack</p>
+                </div>
+                <a href="https://www.telorvehc.store">telorvehc.store</a>
+              </div>
+              <p>
+                Plataforma de e-commerce con catalogo, autenticacion, roles, carrito,
+                pedidos, administracion de productos y despliegue en produccion.
+              </p>
+              <ul>
+                <li>Backend REST con Node.js, Express y MySQL/MariaDB.</li>
+                <li>Pagos con Mercado Pago, API Orders y webhooks.</li>
+                <li>Importacion de catalogos, imagenes, Excel y JSON.</li>
+                <li>Notificaciones de pedidos y consultas mediante Nodemailer.</li>
+              </ul>
+            </article>
+
+            <article class="cv-project">
+              <div class="project-heading">
+                <div>
+                  <h3>Sistema de Gestion de Consorcios ADC</h3>
+                  <p>Plataforma administrativa privada</p>
+                </div>
+                <span>En produccion</span>
+              </div>
+              <p>
+                Aplicacion para centralizar propietarios, unidades, periodos, gastos,
+                pagos, liquidaciones, deuda, documentos y comunicaciones.
+              </p>
+              <ul>
+                <li>Modelado y persistencia con MongoDB y Mongoose.</li>
+                <li>Calculo de expensas, prorrateos y estados financieros.</li>
+                <li>Generacion y fusion de documentos con PDFKit y PDF-Lib.</li>
+                <li>Exportacion Excel, correos masivos y almacenamiento de archivos.</li>
+              </ul>
+            </article>
+          </section>
+
+          <section>
+            <div class="section-title">
+              <h2>Capacidades</h2>
+            </div>
+            <div class="capability-grid">
+              <article>
+                <h3>Backend</h3>
+                <p>APIs, autenticacion, permisos, validaciones y procesos de negocio.</p>
+              </article>
+              <article>
+                <h3>Frontend</h3>
+                <p>Interfaces responsive, formularios, estados y experiencia de usuario.</p>
+              </article>
+              <article>
+                <h3>Datos</h3>
+                <p>Modelado relacional y documental, consultas y migracion de informacion.</p>
+              </article>
+              <article>
+                <h3>Produccion</h3>
+                <p>Variables de entorno, almacenamiento, dominios y despliegue.</p>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <div class="section-title">
+              <h2>Educacion</h2>
+            </div>
+
+            <div class="education-list">
+              <article>
+                <div>
+                  <h3>Tecnicatura en Programacion de Sistemas</h3>
+                  <p>UCES | Olivos, Buenos Aires</p>
+                </div>
+                <span>2023 - 2026</span>
+              </article>
+              <article>
+                <div>
+                  <h3>Curso de Ingles Basico</h3>
+                  <p>CUI | CABA</p>
+                </div>
+                <span>2023</span>
+              </article>
+              <article>
+                <div>
+                  <h3>Curso de Reparacion y Armado de PC</h3>
+                  <p>ISA | Olivos, Buenos Aires</p>
+                </div>
+                <span>2022</span>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        window.lucide?.createIcons();
+        document.querySelector("#print-cv").addEventListener("click", () => window.print());
+      });
+    </script>
+  </body>
+</html>
