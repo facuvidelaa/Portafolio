@@ -7,7 +7,8 @@
   --panel: #ffffff;
   --line: #385766;
   --accent: #5ca4c8;
-  --soft: #d9eaf1;
+  --soft: #d9edf4;
+  --soft-strong: #c7e2ec;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -78,11 +79,12 @@ p {
 
 .cv-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 210px;
-  gap: 34px;
+  grid-template-columns: minmax(0, 1fr) 196px;
+  gap: 30px;
   align-items: stretch;
-  padding: 30px 34px;
-  background: var(--soft);
+  padding: 28px 32px;
+  background:
+    linear-gradient(90deg, var(--soft-strong), var(--soft) 62%, #eef7fa);
 }
 
 .cv-intro {
@@ -100,9 +102,9 @@ p {
 }
 
 h1 {
-  margin-bottom: 13px;
-  font-size: clamp(3rem, 6vw, 5rem);
-  line-height: 0.92;
+  margin-bottom: 12px;
+  font-size: clamp(3.1rem, 6vw, 5.2rem);
+  line-height: 0.9;
   text-transform: uppercase;
 }
 
@@ -114,17 +116,28 @@ h1 {
   line-height: 1.58;
 }
 
+.headline-stack {
+  margin: -3px 0 10px;
+  color: var(--line);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
 .contact-data {
   display: grid;
-  grid-template-columns: repeat(4, max-content);
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 20px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(56, 87, 102, 0.35);
+  grid-template-columns: repeat(3, minmax(0, max-content));
+  justify-content: start;
+  gap: 9px 16px;
+  margin-top: 18px;
   font-size: 0.7rem;
   font-weight: 800;
   white-space: nowrap;
+}
+
+@media (max-width: 980px) and (min-width: 821px) {
+  .contact-data {
+    grid-template-columns: repeat(2, minmax(0, max-content));
+  }
 }
 
 .contact-data > a,
@@ -143,8 +156,55 @@ h1 {
   stroke-width: 2.2;
 }
 
+.contact-data i {
+  display: inline-flex;
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+  color: var(--line);
+  font-style: normal;
+  font-size: 0.56rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.contact-data i[data-lucide="mail"]::before {
+  content: "@";
+}
+
+.contact-data i[data-lucide="phone"]::before {
+  content: "T";
+}
+
+.contact-data i[data-lucide="linkedin"]::before {
+  content: "in";
+}
+
+.contact-data i[data-lucide="github"]::before {
+  content: "GH";
+  font-size: 0.44rem;
+}
+
+.contact-data i[data-lucide="globe"]::before {
+  content: "WEB";
+  font-size: 0.38rem;
+}
+
+.contact-data i[data-lucide="map-pin"]::before {
+  content: "AR";
+  font-size: 0.45rem;
+}
+
+.contact-data svg + ::before,
+.contact-data svg::before {
+  content: none;
+}
+
 .cv-photo {
-  min-height: 250px;
+  min-height: 238px;
   border: 2px solid var(--line);
   background: var(--panel);
   box-shadow: 5px 5px 0 var(--ink);
@@ -161,22 +221,22 @@ h1 {
 
 .recruiter-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 290px;
+  grid-template-columns: minmax(0, 1fr) 300px;
 }
 
 .cv-main {
   min-width: 0;
-  padding: 28px 30px 34px;
+  padding: 26px 28px 34px 32px;
 }
 
 .cv-main > section + section {
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .cv-sidebar {
-  padding: 28px 24px;
+  padding: 26px 24px;
   border-left: 2px solid var(--line);
-  background: color-mix(in srgb, var(--soft) 65%, var(--panel));
+  background: var(--soft);
 }
 
 .cv-sidebar section + section {
@@ -188,7 +248,7 @@ h1 {
   align-items: baseline;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   border-bottom: 2px solid var(--line);
 }
 
@@ -207,8 +267,9 @@ h1 {
 }
 
 .cv-project {
-  padding: 16px;
+  padding: 14px;
   border: 2px solid var(--line);
+  background: #ffffff;
 }
 
 .cv-project + .cv-project {
@@ -250,11 +311,11 @@ h1 {
 .cv-project > p,
 .experience-item > p {
   color: var(--copy);
-  line-height: 1.48;
+  line-height: 1.45;
 }
 
 .cv-project > p {
-  margin: 11px 0;
+  margin: 10px 0;
 }
 
 .cv-project ul {
@@ -264,7 +325,7 @@ h1 {
 }
 
 .cv-project li {
-  margin-top: 6px;
+  margin-top: 5px;
   color: var(--copy);
   line-height: 1.4;
 }
@@ -277,13 +338,64 @@ h1 {
 }
 
 .project-stack {
-  margin: 12px -16px -16px !important;
-  padding: 9px 16px;
+  margin: 11px -14px -14px !important;
+  padding: 9px 14px;
   border-top: 1px solid var(--line);
-  background: var(--soft);
+  background: var(--soft-strong);
   color: var(--ink) !important;
   font-size: 0.72rem;
   font-weight: 850;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.value-grid article {
+  padding: 13px;
+  border: 2px solid var(--line);
+  background: #ffffff;
+}
+
+.value-grid h3 {
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.value-grid p {
+  margin-bottom: 0;
+  color: var(--copy);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.achievement-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.achievement-list li {
+  color: var(--copy);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.achievement-list li::before {
+  content: "\2713";
+  margin-right: 7px;
+  color: var(--line);
+  font-weight: 950;
+}
+
+.featured-experience {
+  padding-top: 0;
 }
 
 .experience-item {
@@ -319,6 +431,30 @@ h1 {
   line-height: 1.45;
 }
 
+.side-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.side-list li {
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(56, 87, 102, 0.25);
+  color: var(--copy);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.side-list li::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border: 2px solid var(--line);
+  background: var(--panel);
+}
+
 .sidebar-item {
   padding: 10px 0;
   border-bottom: 1px solid rgba(56, 87, 102, 0.25);
@@ -341,9 +477,13 @@ h1 {
   }
 
   .contact-data {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(3, max-content);
     justify-content: start;
     white-space: normal;
+  }
+
+  .value-grid {
+    grid-template-columns: 1fr;
   }
 
   .cv-sidebar {
@@ -400,15 +540,16 @@ h1 {
   html,
   body {
     width: 210mm;
-    min-height: 297mm;
+    height: 297mm;
     margin: 0;
     background: #ffffff;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+    overflow: hidden;
   }
 
   body {
-    font-size: 8.4pt;
+    font-size: 9.2pt;
   }
 
   .cv-toolbar {
@@ -417,47 +558,66 @@ h1 {
 
   .cv-sheet {
     width: 210mm;
-    min-height: 297mm;
+    height: 297mm;
     margin: 0;
     border: 0;
     box-shadow: none;
+    overflow: hidden;
   }
 
   .cv-heading {
-    grid-template-columns: minmax(0, 1fr) 34mm;
+    grid-template-columns: minmax(0, 1fr) 33mm;
     gap: 5mm;
-    min-height: 54mm;
-    padding: 7mm 9mm;
+    height: 52mm;
+    padding: 6.5mm 8.5mm;
   }
 
   .eyebrow {
     margin-bottom: 2mm;
-    font-size: 7pt;
+    font-size: 7.5pt;
   }
 
   h1 {
-    margin-bottom: 2.5mm;
-    font-size: 28pt;
+    margin-bottom: 2mm;
+    font-size: 28.5pt;
   }
 
   .profile {
     max-width: none;
-    font-size: 7.5pt;
-    line-height: 1.4;
+    font-size: 8.2pt;
+    line-height: 1.36;
+  }
+
+  .headline-stack {
+    margin: -0.8mm 0 1.4mm;
+    font-size: 6.2pt;
   }
 
   .contact-data {
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(3, max-content);
     justify-content: start;
-    gap: 1.2mm 4mm;
-    margin-top: 2.5mm;
-    padding-top: 2mm;
-    font-size: 5.6pt;
+    gap: 1mm 3mm;
+    margin-top: 2.2mm;
+    font-size: 5.55pt;
   }
 
   .contact-data svg {
     width: 9px;
     height: 9px;
+  }
+
+  .contact-data i {
+    width: 10px;
+    height: 10px;
+    font-size: 4.3pt;
+  }
+
+  .contact-data i[data-lucide="map-pin"]::before {
+    font-size: 3.5pt;
+  }
+
+  .contact-data i[data-lucide="github"]::before {
+    font-size: 3.4pt;
   }
 
   .cv-photo {
@@ -466,24 +626,24 @@ h1 {
   }
 
   .recruiter-layout {
-    grid-template-columns: minmax(0, 1fr) 58mm;
-    min-height: 243mm;
+    grid-template-columns: minmax(0, 1fr) 56mm;
+    height: 245mm;
   }
 
   .cv-main {
-    padding: 5mm 6mm 7mm 9mm;
+    padding: 4.5mm 5.5mm 6mm 8.5mm;
   }
 
   .cv-main > section + section {
-    margin-top: 4mm;
+    margin-top: 4.1mm;
   }
 
   .cv-sidebar {
-    padding: 5mm 6mm;
+    padding: 4.5mm 5mm;
   }
 
   .cv-sidebar section + section {
-    margin-top: 5mm;
+    margin-top: 4.3mm;
   }
 
   .section-title {
@@ -493,11 +653,11 @@ h1 {
   .section-title h2,
   .cv-sidebar h2 {
     margin-bottom: 1.5mm;
-    font-size: 7.5pt;
+    font-size: 8.15pt;
   }
 
   .section-title span {
-    font-size: 5.4pt;
+    font-size: 5.8pt;
   }
 
   .cv-project {
@@ -511,7 +671,7 @@ h1 {
 
   .project-heading h3,
   .experience-heading h3 {
-    font-size: 8pt;
+    font-size: 8.7pt;
   }
 
   .project-heading p,
@@ -519,14 +679,14 @@ h1 {
   .project-heading > a,
   .project-heading > span,
   .experience-heading > span {
-    font-size: 5.7pt;
+    font-size: 6.1pt;
   }
 
   .cv-project > p,
   .cv-project li,
   .experience-item > p {
-    font-size: 6.6pt;
-    line-height: 1.32;
+    font-size: 7.25pt;
+    line-height: 1.28;
   }
 
   .cv-project > p {
@@ -538,9 +698,37 @@ h1 {
   }
 
   .project-stack {
-    margin: 2.5mm -3mm -3mm !important;
-    padding: 1.7mm 3mm;
-    font-size: 5.7pt !important;
+    margin: 2.3mm -3mm -3mm !important;
+    padding: 1.6mm 3mm;
+    font-size: 6.05pt !important;
+  }
+
+  .value-grid {
+    gap: 2mm;
+  }
+
+  .value-grid article {
+    padding: 2.5mm;
+    break-inside: avoid;
+  }
+
+  .value-grid h3 {
+    margin-bottom: 1mm;
+    font-size: 6.9pt;
+  }
+
+  .value-grid p {
+    font-size: 7pt;
+    line-height: 1.25;
+  }
+
+  .achievement-list {
+    gap: 1.3mm 3mm;
+  }
+
+  .achievement-list li {
+    font-size: 6.9pt;
+    line-height: 1.25;
   }
 
   .experience-item {
@@ -553,22 +741,35 @@ h1 {
   }
 
   .stack-group + .stack-group {
-    margin-top: 3mm;
+    margin-top: 2.4mm;
   }
 
   .stack-group h3,
   .sidebar-item h3 {
-    font-size: 6.4pt;
+    font-size: 6.9pt;
   }
 
   .stack-group p,
   .sidebar-item p,
   .compact-copy {
-    font-size: 6.2pt;
-    line-height: 1.35;
+    font-size: 6.65pt;
+    line-height: 1.26;
   }
 
   .sidebar-item {
-    padding: 2mm 0;
+    padding: 1.5mm 0;
+  }
+
+  .side-list li {
+    padding: 1.35mm 0;
+    font-size: 6.55pt;
+    line-height: 1.23;
+  }
+
+  .side-list li::before {
+    width: 4px;
+    height: 4px;
+    margin-right: 4px;
+    border-width: 1px;
   }
 }
