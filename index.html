@@ -16,21 +16,28 @@
     <meta name="theme-color" content="#5ca4c8" />
     <meta name="color-scheme" content="light" />
 
+    <link rel="canonical" href="https://facundovidela.dev/" />
+
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_AR" />
+    <meta property="og:url" content="https://facundovidela.dev/" />
     <meta property="og:title" content="Facundo Videla | Desarrollador Full Stack" />
     <meta
       property="og:description"
       content="Aplicaciones web, sistemas de gestión, e-commerce y soluciones Full Stack a medida."
     />
     <meta property="og:site_name" content="Portfolio de Facundo Videla" />
+    <meta property="og:image" content="https://facundovidela.dev/assets/facundo-videla-cv.jpg" />
+    <meta property="og:image:alt" content="Retrato profesional de Facundo Videla" />
 
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://facundovidela.dev/" />
     <meta name="twitter:title" content="Facundo Videla | Desarrollador Full Stack" />
     <meta
       name="twitter:description"
       content="Aplicaciones web, sistemas de gestión, e-commerce y soluciones Full Stack a medida."
     />
+    <meta name="twitter:image" content="https://facundovidela.dev/assets/facundo-videla-cv.jpg" />
 
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="site.webmanifest" />
@@ -39,22 +46,62 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Facundo Videla",
-        "jobTitle": "Desarrollador Full Stack",
-        "email": "mailto:videlafacundo2004@gmail.com",
-        "sameAs": [
-          "https://www.linkedin.com/in/facu-videla",
-          "https://www.telorvehc.store"
-        ],
-        "knowsAbout": [
-          "JavaScript",
-          "Node.js",
-          "Express",
-          "MySQL",
-          "MongoDB",
-          "Desarrollo web",
-          "APIs REST"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://facundovidela.dev/#facundo-videla",
+            "name": "Facundo Videla",
+            "url": "https://facundovidela.dev/",
+            "image": "https://facundovidela.dev/assets/facundo-videla-cv.jpg",
+            "jobTitle": "Desarrollador Full Stack",
+            "email": "mailto:videlafacundo2004@gmail.com",
+            "telephone": "+54 9 11 3420-8953",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Buenos Aires",
+              "addressCountry": "AR"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/facu-videla",
+              "https://github.com/facuvidelaa",
+              "https://www.telorvehc.store"
+            ],
+            "knowsAbout": [
+              "JavaScript",
+              "Node.js",
+              "Express",
+              "MySQL",
+              "MongoDB",
+              "Desarrollo web",
+              "APIs REST",
+              "E-commerce",
+              "Sistemas de gestión"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://facundovidela.dev/#website",
+            "url": "https://facundovidela.dev/",
+            "name": "Portfolio de Facundo Videla",
+            "description": "Portfolio de Facundo Videla, desarrollador Full Stack de aplicaciones web, sistemas de gestión y soluciones a medida.",
+            "inLanguage": "es-AR",
+            "publisher": {
+              "@id": "https://facundovidela.dev/#facundo-videla"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://facundovidela.dev/#webpage",
+            "url": "https://facundovidela.dev/",
+            "name": "Facundo Videla | Desarrollador Full Stack",
+            "isPartOf": {
+              "@id": "https://facundovidela.dev/#website"
+            },
+            "about": {
+              "@id": "https://facundovidela.dev/#facundo-videla"
+            },
+            "inLanguage": "es-AR"
+          }
         ]
       }
     </script>
