@@ -1,0 +1,7 @@
+# Archivos temporales generados durante pruebas locales
+output/
+tmp/
+
+# Cachés y archivos del sistema
+.DS_Store
+Thumbs.db
