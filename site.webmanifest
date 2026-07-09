@@ -2,15 +2,27 @@
   "name": "Facundo Videla | Desarrollador Full Stack",
   "short_name": "Facundo Videla",
   "description": "Portfolio de desarrollo Full Stack, sistemas de gestión y soluciones web a medida.",
-  "start_url": "./",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#eaf2f5",
   "theme_color": "#5ca4c8",
   "icons": [
     {
-      "src": "assets/favicon.svg",
+      "src": "/assets/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any"
     }
   ]
